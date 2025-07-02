@@ -20,13 +20,6 @@ It shows current weather, hourly and 5-day forecasts, and includes a beautiful l
 
 ---
 
-## 🖼️ Preview
-
-<img src="light-bg.png" width="400"/>  
-<img src="dark-bg.png" width="400"/>
-
----
-
 ## 🛠️ Built With
 
 - HTML5
