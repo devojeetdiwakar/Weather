@@ -1,0 +1,237 @@
+/* General Reset and Background */
+body {
+  font-family: 'Arial', sans-serif;
+  background: url('light-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.5s ease;
+}
+
+body.dark {
+  background: url('dark-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+}
+
+/* Main Weather App Container */
+.weather-app {
+  background: rgba(0, 0, 0, 0.4); /* translucent black */
+  color: white;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 420px;
+  max-height: 90vh;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  overflow-y: auto; /* Enable scroll */
+  position: relative;
+  backdrop-filter: blur(6px);
+}
+.weather-app::-webkit-scrollbar {
+  width: 6px;
+}
+.weather-app::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* Input and Button */
+input {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  width: 100%;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  background: rgba(255,255,255,0.9);
+  color: #000;
+}
+
+body.dark input {
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+}
+
+button {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  width: 100%;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: rgb(239, 231, 231);
+  cursor: pointer;
+}
+
+/* Weather Info Section */
+.weather-info {
+  text-align: left;
+  margin-top: 1.2rem;
+}
+
+.weather-info h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+}
+
+.weather-info .row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.weather-info .row:last-child {
+  border-bottom: none;
+}
+.condition-icons {
+  font-size: 1.4rem;
+  margin-right: 4px;
+} 
+
+/* Hourly Forecast - Horizontal Scroll */
+.hourly-scroll {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  padding: 0.5rem 0;
+}
+
+.hour-box {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 0.5rem;
+  text-align: center;
+  min-width: 80px;
+  backdrop-filter: blur(4px);
+  flex-shrink: 0;
+}
+
+.hour-box img {
+  height: 30px;
+  margin: 5px 0;
+}
+
+/* 5-Day Forecast - Vertical Scroll */
+.daily-scroll {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  max-height: 220px;
+  overflow-y: auto;
+  margin-top: 0.5rem;
+  padding-right: 5px;
+}
+
+.day-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255,255,255,0.05);
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  backdrop-filter: blur(3px);
+}
+
+/* Chart Container */
+#tempChart {
+  margin-top: 1rem;
+  background: rgba(255,255,255,0.05);
+  border-radius: 10px;
+  padding: 10px;
+  backdrop-filter: blur(4px);
+}
+
+/* Responsive */
+@media (max-height: 500px) {
+  .weather-app {
+    padding: 1rem;
+    max-height: 95vh;
+  }
+  .theme-toggle {
+    top: 10px;
+    left: 10px;
+  }
+}
+
+/* Centered Search Box */
+.search-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  margin-top: 2rem;
+}
+
+.search-box input,
+.search-box button {
+  font-size: 0.9rem;
+  max-width: 200px;
+}
+
+.error-box {
+  text-align: center;
+  padding: 1rem;
+}
+
+.error-animation {
+  width: 180px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.error-text {
+  color: #fff;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+.retry-btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+.retry-btn:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.error-box {
+  text-align: center;
+}
+.error-animation {
+  width: 100px;
+  height: 100px;
+}
+.error-text {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  
+  <div class="weather-app">
+    <div class="theme-toggle" id="toggleThemeBtn">🌙</div>
+    <h1>🌤️ Weather</h1>
+
+    <!-- SEARCH SECTION -->
+    <div class="search-box">
+      <input type="text" id="cityInput" placeholder="🔍 Search for a city or airport" />
+      <button id="getWeatherBtn">weather</button>
+    </div>
+
+    <!-- WEATHER DATA -->
+    <div class="weather-info" id="weatherContainer">
+      <!-- JS will inject data here -->
+    </div>
+
+    <!-- CHART will be created by JS dynamically -->
+    
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
