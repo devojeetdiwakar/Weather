@@ -1,5 +1,7 @@
 # Weather
-Modern weather app with theme toggle, chart, and forecasts
+**Modern weather app with theme toggle, chart, and forecasts**
+
+🔗 **[Click here to view the live project](https://devojeetdiwakar.github.io/Weather/)**
 
 # 🌤️ Weatherly UI
 
@@ -51,5 +53,11 @@ To use it:
 ``js
 const apiKey = "YOUR_API_KEY_HERE";
 
-🙋‍♂️ Author
-Made with ❤️ by Devojeet Diwakar
+## 📄 License
+
+This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+
+## 🙋‍♂️ Author
+
+**Devojeet Diwakar**  
+📬 [LinkedIn](https://linkedin.com/in/devojeetdiwakar) 
